@@ -1,0 +1,7 @@
+{
+  "custom/arch": {
+    "format": "󰣇",
+    "tooltip": true,
+    "tooltip-format": "Made with \n ~shivam"
+  }
+}

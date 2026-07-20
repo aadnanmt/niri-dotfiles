@@ -1,0 +1,13 @@
+show=drun
+prompt=Search...
+width=400
+height=450
+location=center
+always_parse_args=true
+show_all=true
+term=kitty
+hide_scroll=true
+insensitive=true
+cols=1
+line_wrap=word
+no_actions=true

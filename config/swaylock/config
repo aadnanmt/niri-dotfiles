@@ -1,0 +1,39 @@
+# ~/.config/swaylock/config
+
+# Based UI
+ignore-empty-password
+font=JetBrainsMono NF Semibold
+
+# Dimension & Indicator 
+indicator-radius=100
+indicator-thickness=7
+
+# Background Deep Black
+color=050505
+
+# Inside Ring
+inside-color=00000000
+inside-clear-color=00000000
+inside-ver-color=00000000
+inside-wrong-color=00000000
+
+# Indicator Keypress
+key-hl-color=00ffff
+bs-hl-color=ff0055
+caps-lock-key-hl-color=00ffff
+caps-lock-bs-hl-color=ff0055
+
+# Outer Ring
+ring-color=222222
+ring-clear-color=00ffff
+ring-ver-color=00ffff
+ring-wrong-color=ff0055
+
+# Text Inside
+text-color=ffffff
+text-clear-color=00ffff
+text-ver-color=00ffff
+text-wrong-color=ff0055
+
+# Other Security Setting
+show-failed-attempts

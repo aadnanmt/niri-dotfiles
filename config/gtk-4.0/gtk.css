@@ -1,0 +1,18 @@
+window,
+window.background,
+button,
+entry,
+combobox,
+menu,
+menuitem,
+checkbutton,
+radiobutton,
+switch,
+scrollbar,
+scrollbar slider,
+progressbar,
+levelbar trough,
+levelbar block,
+decoration {
+  border-radius: 0;
+}

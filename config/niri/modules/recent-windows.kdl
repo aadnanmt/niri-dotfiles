@@ -1,0 +1,15 @@
+recent-windows {
+    open-delay-ms 0
+
+    highlight {
+        active-color "#00ffff"
+        urgent-color "#ff9999ff"
+        padding 30
+        corner-radius 0
+    }
+
+    previews {
+        max-height 480
+        max-scale 1.0
+    }
+}

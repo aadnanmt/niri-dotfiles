@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Toggle logic
+if pgrep -x "wofi" > /dev/null; then
+    pkill -x "wofi"
+    exit 0
+fi
+
+# Option
+shutdown='󰐥 Shutdown'
+reboot='󰜉 Reboot'
+lock='󰌾 Lock'
+suspend='󰤄 Suspend'
+hibernate='󰒲 Hibernate'
+logout='󰍃 Logout'
+
+# Power menu logic
+selected=$(echo -e "$lock\n$suspend\n$hibernate\n$logout\n$reboot\n$shutdown" | wofi --dmenu --prompt "Power Menu" --width 250 --height 320 --cache-file /dev/null)
+
+case $selected in
+    "$shutdown")
+        systemctl poweroff
+        ;;
+    "$reboot")
+        systemctl reboot
+        ;;
+    "$lock")
+        /usr/bin/swaylock -c 050505
+        ;;
+    "$suspend")
+        systemctl suspend
+        ;;
+    "$hibernate")
+        systemctl hibernate
+        ;;
+    "$logout")
+        niri msg action quit --skip-confirmation
+        ;;
+esac

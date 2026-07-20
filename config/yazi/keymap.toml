@@ -1,0 +1,9 @@
+[manager]
+prepend_keymap = [
+  { on = "y",  run = ["ya"],                    desc = "Yank file" },
+  { on = "x",  run = ["yank", "cut"],           desc = "Cut file" },
+  { on = "p",  run = ["paste"],                 desc = "Paste file" },
+  { on = "d",  run = ["remove"],                desc = "Delete" },
+  { on = "r",  run = ["rename"],                desc = "Rename" },
+  { on = "Space", run = "toggle",               desc = "Toggle select" },
+]

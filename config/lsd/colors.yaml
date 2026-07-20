@@ -1,0 +1,41 @@
+# lsd colors (Cyan Rice)
+user: 00ffff
+group: 008080
+permission:
+  read: 00d7d7
+  write: 00afaf
+  exec: 00ffff
+  exec-sticky: 5fffff
+  no-access: ff005f
+size:
+  none: 005f5f
+  small: 00afaf
+  medium: 00d7d7
+  large: 00ffff
+date:
+  hour: 00ffff
+  day: 00d7d7
+  older: 00afaf
+inode:
+  valid: 00ffff
+  invalid: ff005f
+links:
+  valid: 00ffff
+  invalid: ff005f
+tree-edge: 008080
+name:
+  directory: 00ffff
+  executable: 5fffff
+  symlink:
+    target: 00d7d7
+    broken: ff005f
+  pipe: 00afaf
+  block-device: 00d7d7
+  char-device: 00d7d7
+  socket: 00afaf
+  special: 5fffff
+  file:
+    small: d7ffff
+    medium: d7ffff
+    large: d7ffff
+  multi-staged-executable: 00ffff

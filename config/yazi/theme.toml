@@ -1,0 +1,18 @@
+[manager]
+hovered         = { bg = "#004d4d", bold = true }
+selection       = { bg = "#008080", bold = true }
+
+[filetype]
+rules = [
+    { mime = "directory", fg = "#00ffff", bold = true },
+    { mime = "audio/*",   fg = "#008080" },
+    { mime = "video/*",   fg = "#008080" },
+    { mime = "image/*",   fg = "#00d7d7" },
+    
+    { name = "*.fish", mime = "*", fg = "#00ffff" },
+    { name = "*.lua",  mime = "*", fg = "#5fffff" },
+    { name = "*.rs",  mime = "*", fg = "#ffd7af" },
+    { name = "*.go",  mime = "*", fg = "#00d7ff" },
+    { name = "*.js" "*ts", mime = "*", fg = "#ffff00" },
+    { name = "*.py",  mime = "*", fg = "#d7ff5f" },
+]

@@ -1,0 +1,77 @@
+[global]
+    # --- DISPLAY---
+    monitor = 0
+    follow = mouse
+    
+    # width and height
+    width = (300, 350)
+    height = (50, 100)
+    
+    origin = top-right
+    offset = (20, 60)
+    
+    # Scale and progress bar
+    notification_limit = 5
+    progress_bar = true
+    progress_bar_height = 6
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+    # --- LOOK & FEEL (Cyan rice style) ---
+    font = JetBrainsMono Nerd Font 10
+    
+    markup = full
+    format = "<span foreground='#00ffff'><b>%s</b></span>\n%b"
+    
+    # Spacing
+    padding = 16
+    horizontal_padding = 16
+    text_icon_padding = 12
+    gap_size = 8
+    
+    # Borders and rdius
+    frame_width = 2
+    frame_color = "#00ffff"
+    separator_color = "frame"
+    corner_radius = 0
+
+    # Icons
+    icon_position = off
+    min_icon_size = 48
+    max_icon_size = 64
+    enable_recursive_icon_lookup = true
+    # icon_theme = Tela-circle-cyan
+
+    # --- TEXT HANDLING ---
+    ellipsize = end
+    ignore_newline = no
+    stack_duplicates = true
+    show_indicators = yes
+
+    # --- MOUSE INTERACTION ---
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+    # --- Wayland Handle ---
+    force_xwayland = false
+    script = ~/.config/dunst/notif-sound.sh
+
+[urgency_low]
+    background = "#050505"
+    foreground = "#00ffff"
+    frame_color = "#004d4d"
+    timeout = 4
+
+[urgency_normal]
+    background = "#050505"
+    foreground = "#00ffff"
+    frame_color = "#00ffff"
+    timeout = 8
+
+[urgency_critical]
+    background = "#050505"
+    foreground = "#ffffff"
+    frame_color = "#ff005f"
+    timeout = 0
