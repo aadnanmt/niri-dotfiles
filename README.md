@@ -2,6 +2,28 @@
 
 > Personal dotfiles for **Niri** (Wayland compositor) on Arch Linux cyan-theme, minimal, aesthetic.
 
+## Screenshots
+
+<details>
+<summary>Interface & Menus</summary>
+<br>
+<img src="preview/interface.png" width="800">
+<img src="preview/menu-apps-wofi.png" width="800">
+<img src="preview/waybar.png" width="800">
+<img src="preview/powermenu.png" width="800">
+<img src="preview/emoji-picker.png" width="800">
+<img src="preview/wp-select.png" width="800">
+</details>
+
+<details>
+<summary>TUI & Apps</summary>
+<br>
+<img src="preview/tui.png" width="800">
+<img src="preview/dunst.png" width="800">
+<img src="preview/htop.png" width="800">
+<img src="preview/yazi.png" width="800">
+</details>
+
 ## Stack
 
 | Domain | App |
