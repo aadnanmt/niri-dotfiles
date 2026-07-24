@@ -1,0 +1,6 @@
+bibata-cursor-theme-bin
+cbonsai
+lavat
+neo-matrix
+peaclock
+pipes.sh
