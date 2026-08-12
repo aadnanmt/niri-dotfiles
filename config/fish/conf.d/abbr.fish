@@ -53,7 +53,7 @@ abbr -a off 'sudo shutdown now'
 abbr -a reb 'sudo reboot'
 abbr -a susp 'systemctl suspend'
 
-abbr -a ss 'sudo systemctl start'
+abbr -a sst 'sudo systemctl start'
 abbr -a sx 'sudo systemctl stop'
 abbr -a sr 'sudo systemctl restart'
 abbr -a st 'systemctl status'
@@ -61,20 +61,20 @@ abbr -a se 'sudo systemctl enable --now'
 abbr -a sd 'sudo systemctl disable --now'
 abbr -a jlu 'journalctl -u'
 
-# --- Node Dev Stack (Bun & Pnpm) ---
-# Bun
-abbr -a b 'bun'
-abbr -a bi 'bun install'
-abbr -a br 'bun run'
-abbr -a bx 'bun x'
-abbr -a ba 'bun add'
-
-# Pnpm
-abbr -a pn 'pnpm'
-abbr -a pni 'pnpm install'
-abbr -a pnr 'pnpm run'
-abbr -a pnx 'pnpm dlx'
-abbr -a pna 'pnpm add'
+# --- JS Dev Stack (optional, uncomment when installed) ---
+# # Bun
+# abbr -a b 'bun'
+# abbr -a bi 'bun install'
+# abbr -a br 'bun run'
+# abbr -a bx 'bun x'
+# abbr -a ba 'bun add'
+#
+# # Pnpm
+# abbr -a pn 'pnpm'
+# abbr -a pni 'pnpm install'
+# abbr -a pnr 'pnpm run'
+# abbr -a pnx 'pnpm dlx'
+# abbr -a pna 'pnpm add'
 
 # Containers (Podman)
 abbr -a pm 'podman'
@@ -88,7 +88,6 @@ abbr -a .v 'nvim .'
 
 ## --- Other ---
 
-abbr -a vk 'vault-sync && kpsync'
 abbr pomo "~/.config/niri/pomo.sh &"
 abbr batmon "~/.config/niri/batmon.sh &"
 

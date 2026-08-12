@@ -12,7 +12,7 @@ alias ls='lsd'
 alias ll='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
-alias tree='lsd --tree -I "node_modules|.git|target|.next|dist|build|.venv|__pycache__|*.egg-info"'
+# alias tree='lsd --tree -I "node_modules|.git|target|.next|dist|build|.venv|__pycache__|*.egg-info"'
 
 if command -v bat > /dev/null
     alias cat='bat'
@@ -33,7 +33,7 @@ alias reload='source ~/.config/fish/config.fish && echo "Shell reloaded, Cuyy!"'
 
 # TUI apps rice
 alias lg='lazygit'
-alias lkd='lazydocker'
+# alias lkd='lazydocker'  # optional, uncomment when lazydocker installed
 alias cv='cava'
 alias pipes='pipes.sh -p 1 -c 6 -c 4 -t 2 -f 30'
 alias clock='peaclock --colour cyan'
@@ -43,7 +43,7 @@ alias top='btop'
 alias htp='htop'
 
 # System & network
-alias df='duf'
+# alias df='duf'  # optional,  uncomment when duf installed
 alias mem='free -h --si'
 alias localip='ip -c a'                      
 alias publicip='curl -s https://ifconfig.me'
