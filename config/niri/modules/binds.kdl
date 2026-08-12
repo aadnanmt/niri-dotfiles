@@ -287,7 +287,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // Emoji Picker
-    Super+Shift+E allow-when-locked=false hotkey-overlay-title="Emoji Picker: wofi" { spawn-sh "$HOME/.config/wofi/emoji.sh"; }
+    Super+Shift+E allow-when-locked=false hotkey-overlay-title="Emoji Picker: wofi" { spawn "wofi-emoji"; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+Period { quit; }

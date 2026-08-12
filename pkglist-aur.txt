@@ -4,3 +4,4 @@ lavat
 neo-matrix
 peaclock
 pipes.sh
+wofi-emoji

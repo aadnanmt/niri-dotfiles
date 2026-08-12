@@ -10,6 +10,7 @@ fd
 ffmpegthumbnailer
 fish
 fisher
+fnm
 fzf
 git
 git-lfs
