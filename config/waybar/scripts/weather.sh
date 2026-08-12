@@ -14,8 +14,8 @@ else
     echo "$DATA" > "$CACHE"
 fi
 
-TEMP=$(echo "$DATA" | python3 -c "import sys,json; print(json.load(sys.stdin)['current_condition'][0]['temp_C'])" 2> /dev/null)
-CODE=$(echo "$DATA" | python3 -c "import sys,json; print(json.load(sys.stdin)['current_condition'][0]['weatherCode'])" 2> /dev/null)
+TEMP=$(echo "$DATA" | jq -r '.current_condition[0].temp_C' 2> /dev/null)
+CODE=$(echo "$DATA" | jq -r '.current_condition[0].weatherCode' 2> /dev/null)
 
 case "$CODE" in
     113) I="󰖙" ;; 116) I="󰖕" ;; 119 | 122) I="󰖐" ;; 143 | 248 | 260) I="󰖑" ;;
