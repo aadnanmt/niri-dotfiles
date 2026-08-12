@@ -1,0 +1,11 @@
+# fish universal variables
+fish_variables
+
+# fisher generate plugin completions
+completions/
+
+# runtime artifacts that can land in ~/.config
+*.log
+*.swp
+*~
+*.lock
