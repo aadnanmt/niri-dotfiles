@@ -13,6 +13,6 @@ rules = [
     { name = "*.lua",  mime = "*", fg = "#5fffff" },
     { name = "*.rs",  mime = "*", fg = "#ffd7af" },
     { name = "*.go",  mime = "*", fg = "#00d7ff" },
-    { name = "*.js" "*ts", mime = "*", fg = "#ffff00" },
+    { name = "*.js,*.ts", mime = "*", fg = "#ffff00" },
     { name = "*.py",  mime = "*", fg = "#d7ff5f" },
 ]
