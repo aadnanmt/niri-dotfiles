@@ -1,5 +1,5 @@
 # =============================================================================
-# SHARED FUNCTIO — POSIX-compatible (bash/zsh/fish via compat)
+# SHARED FUNCTIONS — POSIX-compatible (bash/zsh/fish via compat)
 # =============================================================================
 # Fish versions are in fish/functions/ — keep both in sync.
 
@@ -25,8 +25,15 @@ extract() {
             *.Z)       uncompress "$1" ;;
             *.7z)      7z x "$1" ;;
             *)         echo "'$1' cannot be extracted" ;;
-        esac
-    else
+    esac
+  else
         echo "'$1' is not a valid file"
-    fi
+  fi
+}
+
+# Arch cleanup
+clean() {
+    orphans=$(pacman -Qtdq)
+    [ -n "$orphans" ] && sudo pacman -Rns $orphans || echo "No orphans to remove."
+    command -v paru > /dev/null && paru -Sc --noconfirm
 }

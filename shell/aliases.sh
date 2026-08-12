@@ -13,7 +13,7 @@ alias ls='lsd'
 alias ll='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
-alias tree='tree -I "node_modules|.git|target|.next|dist|build|.venv|__pycache__|*.egg-info"'
+# alias tree='tree -I "node_modules|.git|target|.next|dist|build|.venv|__pycache__|*.egg-info"'  # optional,uncomment when tree installed
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -71,17 +71,17 @@ alias se='sudo systemctl enable --now'
 alias sd='sudo systemctl disable --now'
 alias sl='journalctl -u'
 
-# Node Dev Stack
-alias b='bun'
-alias bi='bun install'
-alias br='bun run'
-alias bx='bun x'
-alias ba='bun add'
-alias pn='pnpm'
-alias pni='pnpm install'
-alias pnr='pnpm run'
-alias pnx='pnpm dlx'
-alias pna='pnpm add'
+# JS Dev Stack (optional, uncomment when installed)
+# alias b='bun'
+# alias bi='bun install'
+# alias br='bun run'
+# alias bx='bun x'
+# alias ba='bun add'
+# alias pn='pnpm'
+# alias pni='pnpm install'
+# alias pnr='pnpm run'
+# alias pnx='pnpm dlx'
+# alias pna='pnpm add'
 
 # Containers
 alias pm='podman'
@@ -101,13 +101,13 @@ alias .v='nvim .'
 
 # TUI apps
 alias lg='lazygit'
-alias lkd='lazydocker'
+# alias lkd='lazydocker'  # optional, uncomment when lazydocker installed
 alias cv='cava'
 alias top='btop'
 alias matrix='neo-matrix -D -a -s 20 -c cyan'
 
 # System & network
-alias df='duf'
+# alias df='duf'  # optional, uncomment when duf installed
 alias mem='free -h --si'
 alias localip='ip -c a'
 alias ports='sudo ss -tulanp'
