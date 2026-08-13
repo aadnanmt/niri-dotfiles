@@ -10,9 +10,8 @@ abbr -a up 'sudo pacman -Syu'
 abbr -a ss 'pacman -Ss'
 abbr -a qs 'pacman -Qs'
 
-
 # --- Package Management ---
-abbr -a pr 'paru'
+abbr -a pr paru
 abbr -a pri 'paru -S'
 abbr -a prr 'paru -Rns'
 abbr -a pru 'paru -Syu'
@@ -41,12 +40,16 @@ abbr -a gsw 'git switch'
 abbr -a gsm 'git switch main'
 abbr -a gd 'git diff'
 abbr -a gds 'git diff --staged'
+abbr -a gr 'git restore'
+abbr -a grs 'git restore --staged'
 
 # --- Git Visual & Panic Buttons ---
 abbr -a glo 'git log --graph --oneline --decorate --all'
 abbr -a gundo 'git reset --soft HEAD~1'
 abbr -a gnuke 'git reset --hard HEAD && git clean -fdx'
 
+# --- Generate Cheatsheet ---
+abbr -a cheatgen '~/.config/shell/gen-cheatsheet.sh'
 
 # --- Systemd & Power ---
 abbr -a off 'sudo shutdown now'
@@ -77,13 +80,13 @@ abbr -a jlu 'journalctl -u'
 # abbr -a pna 'pnpm add'
 
 # Containers (Podman)
-abbr -a pm 'podman'
-abbr -a pmc 'podman-compose'
+abbr -a pm podman
+abbr -a pmc podman-compose
 
 # --- Modern Tools ---
-abbr -a f 'fd'
-abbr -a rg 'ripgrep'
-abbr -a v 'nvim'
+abbr -a f fd
+abbr -a rg ripgrep
+abbr -a v nvim
 abbr -a .v 'nvim .'
 
 ## --- Other ---

@@ -9,3 +9,6 @@ completions/
 *.swp
 *~
 *.lock
+
+# generated from alias/abbr configs via gen-cheatsheet.sh
+.config/shell/CHEATSHEET.md

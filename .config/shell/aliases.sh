@@ -56,6 +56,8 @@ alias gsw='git switch'
 alias gsm='git switch main'
 alias gd='git diff'
 alias gds='git diff --staged'
+alias gr='git restore'
+alias grs='git restore --staged'
 alias glo='git log --graph --oneline --decorate --all'
 alias gundo='git reset --soft HEAD~1'
 alias gnuke='git reset --hard HEAD && git clean -fdx'
@@ -63,12 +65,19 @@ alias gst='git stash'
 alias gstp='git stash pop'
 alias gstl='git stash list'
 
+# Generate Cheatsheet
+alias cheatgen='~/.config/shell/gen-cheatsheet.sh'
+
 # Systemd
 alias off='sudo shutdown now'
 alias reb='sudo reboot'
 alias susp='systemctl suspend'
 alias se='sudo systemctl enable --now'
 alias sd='sudo systemctl disable --now'
+alias sst='sudo systemctl start'
+alias sx='sudo systemctl stop'
+alias sr='sudo systemctl restart'
+alias st='systemctl status'
 alias sl='journalctl -u'
 
 # JS Dev Stack (optional, uncomment when installed)
