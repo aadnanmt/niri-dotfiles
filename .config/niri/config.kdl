@@ -5,6 +5,7 @@
 
 // --- MODULAR CONFIG NIRI INCLUDES ---
 include "./modules/startup.kdl"
+include "./modules/env.kdl"
 include "./modules/cursor.kdl"
 include "./modules/input.kdl"
 include "./modules/output.kdl"
