@@ -1,0 +1,13 @@
+# Audio + cover for kew (GStreamer backend)
+# No --audio-format: keep native codec (opus for YT, AAC 256 for YT music premium)
+-x
+--audio-quality 0
+--embed-metadata
+--embed-thumbnail
+-o "~/Music/%(title)s.%(ext)s"
+
+# Yt 403 mitigation
+--cookies-from-browser firefox
+--extractor-args "youtube:player_client=default,android"
+--sleep-requests 1.5
+--sleep-interval 5
