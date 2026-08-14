@@ -11,7 +11,7 @@ end
 # Fix gpg tty
 set -gx GPG_TTY (tty)
 
-# fnm (Node version manager, fish hook. so.. this optional, uncomment when u installed)
+# fnm (Node version manager, optional, uncomment when installed). --use-on-cd = auto-switch per .node-version/.nvmrc
 # if command -q fnm
 #     fnm env --use-on-cd | source
 # end

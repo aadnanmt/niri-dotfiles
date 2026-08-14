@@ -91,8 +91,9 @@ abbr -a .v 'nvim .'
 
 ## --- Other ---
 
-abbr pomo "~/.config/niri/pomo.sh &"
-abbr batmon "~/.config/niri/batmon.sh &"
+abbr -a pomo '~/.config/niri/pomo.sh &'
+abbr -a batmon '~/.config/niri/batmon.sh &'
+abbr -a ff 'reset && fastfetch'
 
 # --- Podman Extended ---
 abbr -a pml 'podman logs -f'

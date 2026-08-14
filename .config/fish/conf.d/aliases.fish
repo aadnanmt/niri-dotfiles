@@ -29,17 +29,17 @@ alias back='cd -'
 alias hom='cd ~'
 alias x='exit'
 alias c='clear'
+alias r='reset'
 alias reload='source ~/.config/fish/config.fish && echo "Shell reloaded, Cuyy!"'
 
 # TUI apps rice
 alias lg='lazygit'
 # alias lkd='lazydocker'  # optional, uncomment when lazydocker installed
 alias cv='cava'
-alias pipes='pipes.sh -p 1 -c 6 -c 4 -t 2 -f 30'
-alias clock='peaclock --colour cyan'
+alias pipes='pipes.sh -b -p 1 -r 120 -c 6 -c 4 -t 1 -f 30'
+alias clock='peaclock --config-dir ~/.config/peaclock'
 alias bonsai='cbonsai -l i -t 0.5'
 alias matrix='neo-matrix -D -a -s 20 -c cyan'
-alias top='btop'
 alias htp='htop'
 
 # System & network
@@ -59,6 +59,6 @@ alias cnvim='cd ~/.config/nvim/ && nvim .'
 alias cl='nvim ~/.config/lazygit/config.yml'
 
 # Python
-alias py='python'
-alias venv='python -m venv .venv'
+alias py='python3'
+alias venv='python3 -m venv .venv'
 alias activate='source .venv/bin/activate.fish'
