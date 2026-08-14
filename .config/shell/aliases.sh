@@ -112,8 +112,8 @@ alias .v='nvim .'
 alias lg='lazygit'
 # alias lkd='lazydocker'  # optional, uncomment when lazydocker installed
 alias cv='cava'
-alias top='btop'
 alias matrix='neo-matrix -D -a -s 20 -c cyan'
+alias ff='reset && fastfetch'
 
 # System & network
 # alias df='duf'  # optional, uncomment when duf installed
