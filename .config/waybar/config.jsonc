@@ -14,7 +14,7 @@
     "cpu",
     "memory",
     "custom/updates",
-    "custom/docker",
+    "custom/podman",
     "custom/lock",
     "custom/power"
   ],
@@ -85,7 +85,7 @@
     "format": "⏻"
   },
 
-  "custom/docker": {
+  "custom/podman": {
     "format": "{}",
     "return-type": "json",
     "interval": 10,

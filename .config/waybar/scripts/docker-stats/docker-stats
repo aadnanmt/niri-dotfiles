@@ -1,0 +1,8 @@
+#!/bin/sh
+
+n=$(podman ps -q | wc -l)
+if [ "$n" -eq 0 ]; then
+    printf '{"text": "🐳 N/A", "tooltip": "no container running"}\n'
+else
+    printf '{"text": "🐳 %d", "tooltip": "%d container(s) running"}\n' "$n" "$n"
+fi

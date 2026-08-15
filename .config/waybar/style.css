@@ -41,7 +41,7 @@
 #custom-power,
 #custom-weather,
 #custom-uptime,
-#custom-docker,
+#custom-podman,
 #workspaces,
 #custom-arch {
   background-color: transparent;
@@ -113,8 +113,8 @@
   color: @cyan_dim;
 }
 
-#custom-docker {
-  color: @electric_blue;
+#custom-podman {
+  color: @cyan_dim;
 }
 
 #custom-music {
