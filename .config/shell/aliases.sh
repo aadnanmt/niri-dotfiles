@@ -105,7 +105,6 @@ alias pmpr='podman pull'
 
 # Modern Tools
 alias f='fd'
-alias rg='ripgrep'
 alias v='nvim'
 alias .v='nvim .'
 

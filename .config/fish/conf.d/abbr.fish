@@ -85,7 +85,6 @@ abbr -a pmc podman-compose
 
 # --- Modern Tools ---
 abbr -a f fd
-abbr -a rg ripgrep
 abbr -a v nvim
 abbr -a .v 'nvim .'
 
