@@ -40,5 +40,6 @@ extract() {
 clean() {
     orphans=$(pacman -Qtdq)
     [ -n "$orphans" ] && sudo pacman -Rns $orphans || echo "No orphans to remove."
+    sudo paccache -r
     command -v paru > /dev/null && paru -Sc --noconfirm
 }
