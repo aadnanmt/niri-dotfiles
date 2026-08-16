@@ -30,16 +30,12 @@ end
 function clean
     set orphans (pacman -Qtdq)
     test -n "$orphans"; and sudo pacman -Rns $orphans; or echo "No orphans to remove."
+    sudo paccache -r
     test -f (which yay); and yay -Sc --noconfirm
     test -f (which paru); and paru -Sc --noconfirm
 end
 
-# Container helpers
-function dkstop
-    set containers (docker ps -q)
-    test -n "$containers"; and docker stop $containers; or echo "No docker containers."
-end
-
+# Container helper
 function pmstop
     set containers (podman ps -q)
     test -n "$containers"; and podman stop $containers; or echo "No podman containers."

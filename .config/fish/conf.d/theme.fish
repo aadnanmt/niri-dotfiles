@@ -19,7 +19,3 @@ set -g fish_color_autosuggestion 005f5f
 
 # FZF cyan style
 set -gx FZF_DEFAULT_OPTS "--color=bg+:#005f5f,bg:#0a0a0a,spinner:#00ffff,hl:#00d7d7,fg:#00ffff,header:#00ffff,info:#00afaf,pointer:#00ffff,marker:#00ffff,fg+:#ffffff,prompt:#00ffff,hl+:#00ffff"
-
-# App themes
-set -gx BAT_THEME "base16"
-set -gx PARU_PAGER "bat"
