@@ -1,0 +1,61 @@
+# ============================================
+# GITHUB-DARK-DEFAULT
+# #58a6ff | #484f58 | #0d1117 | #050505
+# ============================================
+
+[theme]
+name=Github Dark
+
+# Core colors
+accent=#58a6ff
+text=#c9d1d9
+textDim=#8b949e
+textMuted=#484f58
+
+# General Colors
+logo=#58a6ff
+header=#58a6ff
+footer=#484f58
+help=#8b949e
+link=#58a6ff
+nowplaying=#58a6ff
+playbackstatus=#484f58
+
+# Playlist View
+playlist.rownum=#484f58
+playlist.title=#8b949e
+playlist.playing=#58a6ff
+
+# Track View
+trackview.title=#58a6ff
+trackview.artist=#c9d1d9
+trackview.album=#8b949e
+trackview.year=#484f58
+trackview.time=#c9d1d9
+trackview.visualizer=#58a6ff
+trackview.lyrics=#8b949e
+
+# Library View
+library.artist=#58a6ff
+library.album=#8b949e
+library.track=#c9d1d9
+library.enqueued=#58a6ff
+library.playing=#58a6ff
+
+# Search
+search.label=#58a6ff
+search.query=#c9d1d9
+search.result=#8b949e
+search.enqueued=#58a6ff
+search.playing=#58a6ff
+
+# Progress
+progress.filled=#58a6ff
+progress.empty=#484f58
+progress.elapsed=#58a6ff
+
+# Status
+status.info=#58a6ff
+status.warning=#d29922
+status.error=#f85149
+status.success=#3fb950

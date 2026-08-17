@@ -18,11 +18,11 @@
     progress_bar_min_width = 150
     progress_bar_max_width = 300
 
-    # --- LOOK & FEEL (Cyan rice style) ---
+    # --- LOOK & FEEL ---
     font = JetBrainsMono Nerd Font 10
     
     markup = full
-    format = "<span foreground='#00ffff'><b>%s</b></span>\n%b"
+    format = "<span foreground='#58a6ff'><b>%s</b></span>\n%b"
     
     # Spacing
     padding = 16
@@ -30,9 +30,9 @@
     text_icon_padding = 12
     gap_size = 8
     
-    # Borders and rdius
+    # Borders and radius
     frame_width = 2
-    frame_color = "#00ffff"
+    frame_color = "#58a6ff"
     separator_color = "frame"
     corner_radius = 0
 
@@ -41,7 +41,6 @@
     min_icon_size = 48
     max_icon_size = 64
     enable_recursive_icon_lookup = true
-    # icon_theme = Tela-circle-cyan
 
     # --- TEXT HANDLING ---
     ellipsize = end
@@ -60,18 +59,18 @@
 
 [urgency_low]
     background = "#050505"
-    foreground = "#00ffff"
-    frame_color = "#004d4d"
+    foreground = "#c9d1d9"
+    frame_color = "#484f58"
     timeout = 4
 
 [urgency_normal]
     background = "#050505"
-    foreground = "#00ffff"
-    frame_color = "#00ffff"
+    foreground = "#c9d1d9"
+    frame_color = "#58a6ff"
     timeout = 8
 
 [urgency_critical]
     background = "#050505"
-    foreground = "#ffffff"
-    frame_color = "#ff005f"
+    foreground = "#f0f6fc"
+    frame_color = "#f85149"
     timeout = 0

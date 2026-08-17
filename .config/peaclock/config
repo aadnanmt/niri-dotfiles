@@ -7,8 +7,8 @@ set auto-size on
 set auto-ratio on
 date '%a %d %b'
 rate-refresh 250
-style active-fg #00ffff
-style inactive-fg #008080
-style colon-fg #00ffff
-style date #00afaf
-style text #00ffff
+style active-fg #58a6ff
+style inactive-fg #484f58
+style colon-fg #58a6ff
+style date #76e3ea
+style text #c9d1d9

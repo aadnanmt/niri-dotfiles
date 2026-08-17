@@ -8,7 +8,7 @@ font=JetBrainsMono NF Semibold
 indicator-radius=100
 indicator-thickness=7
 
-# Background Deep Black
+# Background
 color=050505
 
 # Inside Ring
@@ -18,22 +18,22 @@ inside-ver-color=00000000
 inside-wrong-color=00000000
 
 # Indicator Keypress
-key-hl-color=00ffff
-bs-hl-color=ff0055
-caps-lock-key-hl-color=00ffff
-caps-lock-bs-hl-color=ff0055
+key-hl-color=58a6ff
+bs-hl-color=f85149
+caps-lock-key-hl-color=58a6ff
+caps-lock-bs-hl-color=f85149
 
 # Outer Ring
-ring-color=222222
-ring-clear-color=00ffff
-ring-ver-color=00ffff
-ring-wrong-color=ff0055
+ring-color=484f58
+ring-clear-color=58a6ff
+ring-ver-color=58a6ff
+ring-wrong-color=f85149
 
 # Text Inside
-text-color=ffffff
-text-clear-color=00ffff
-text-ver-color=00ffff
-text-wrong-color=ff0055
+text-color=f0f6fc
+text-clear-color=58a6ff
+text-ver-color=58a6ff
+text-wrong-color=f85149
 
 # Other Security Setting
 show-failed-attempts

@@ -1,17 +1,17 @@
 /* =============================================================================
-   MY CYAN RICE WAYBAR
+   WAYBAR — github-dark-default
    ============================================================================= */
 @define-color bg_main     #050505;
 @define-color bg_module   #050505;
-@define-color cyan_main   #00ffff;
-@define-color cyan_bright #e0ffff;
-@define-color cyan_dim    #008080;
-@define-color electric_blue #00d7ff;
-@define-color seafoam     #5fffaf;
-@define-color deep_ocean  #004d4d;
-@define-color alert_red   #ff005f;
-@define-color text_main   #e0ffff;
-@define-color void        #000;
+@define-color accent      #58a6ff;
+@define-color fg_main     #c9d1d9;
+@define-color fg_muted    #484f58;
+@define-color green       #3fb950;
+@define-color red         #f85149;
+@define-color purple      #bc8cff;
+@define-color cyan        #76e3ea;
+@define-color text_main   #c9d1d9;
+@define-color void        #0d1117;
 
 * {
   font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
@@ -45,19 +45,16 @@
 #workspaces,
 #custom-arch {
   background-color: transparent;
-  border: 0px solid rgba(0, 255, 255, 0.4);
+  border: 0px solid rgba(88, 166, 255, 0.4);
   padding: 0.2rem 0.8rem;
   margin: 5px 3px;
-  /*border-radius: 8px;*/
 }
 
 /* --- Start Group Launcher ---*/
-/* --- (Arch Logo + Workspaces) --- */
 #launcher {
   background-color: transparent;
-  border: 0px solid rgba(0, 255, 255, 0.4);
+  border: 0px solid rgba(88, 166, 255, 0.4);
   margin: 5px 3px;
-  /* border-radius: 8px; */
   padding: 0 5px;
 }
 
@@ -70,58 +67,57 @@
 }
 
 #custom-arch {
-  color: @cyan_main;
+  color: @accent;
   font-size: 20px;
 }
 
 #workspaces button {
-  color: @cyan_dim;
+  color: @fg_muted;
   padding: 0 5px;
 }
 
 #workspaces button.active {
-  color: @cyan_main;
+  color: @accent;
   background: @bg_main;
-  /* border-radius: 4px; */
 }
 
 /* --- End Group Launcher --- */
 
 #clock,
 #custom-weather {
-  color: @cyan_main;
+  color: @accent;
 }
 
 #pulseaudio {
-  color: @electric_blue;
+  color: @purple;
 }
 
 #battery {
-  color: @seafoam;
+  color: @green;
 }
 
 #battery.critical:not(.charging) {
-  color: @alert_red;
+  color: @red;
 }
 
 #network {
-  color: @electric_blue;
+  color: @cyan;
 }
 
 #cpu,
 #memory {
-  color: @cyan_dim;
+  color: @fg_muted;
 }
 
 #custom-podman {
-  color: @cyan_dim;
+  color: @fg_muted;
 }
 
 #custom-music {
-  color: @cyan_bright;
+  color: @fg_main;
 }
 
 #custom-power {
-  color: @alert_red;
+  color: @red;
   border-color: transparent;
 }

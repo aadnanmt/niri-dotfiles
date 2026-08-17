@@ -246,7 +246,7 @@
 # a terminal that can change color definitions such as Gnome-terminal or rxvt.
 # default is to keep current terminal color
 background = default
-foreground = cyan
+foreground = '#58a6ff'
 
 # SDL and sdl_glsl only support hex code colors, these are the default:
 ; background = '#111111'
@@ -257,14 +257,14 @@ foreground = cyan
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
 gradient = 1
-gradient_color_1 = '#00ffff'
-gradient_color_2 = '#00e6e6'
-gradient_color_3 = '#00cccc'
-gradient_color_4 = '#00b3b3'
-gradient_color_5 = '#009999'
-gradient_color_6 = '#008080'
-gradient_color_7 = '#006666'
-gradient_color_8 = '#004d4d'
+gradient_color_1 = '#58a6ff'
+gradient_color_2 = '#79c0ff'
+gradient_color_3 = '#76e3ea'
+gradient_color_4 = '#3fb950'
+gradient_color_5 = '#d29922'
+gradient_color_6 = '#bc8cff'
+gradient_color_7 = '#484f58'
+gradient_color_8 = '#161b22'
 
 
 # Horizontal is only supported on noncurses output.

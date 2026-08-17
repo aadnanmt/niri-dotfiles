@@ -36,10 +36,10 @@ alias reload='source ~/.config/fish/config.fish && echo "Shell reloaded, Cuyy!"'
 alias lg='lazygit'
 # alias lkd='lazydocker'  # optional, uncomment when lazydocker installed
 alias cv='cava'
-alias pipes='pipes.sh -b -p 1 -r 120 -c 6 -c 4 -t 1 -f 30'
+alias pipes='pipes.sh -b -p 1 -r 120 -c 4 -c 5 -t 1 -f 30'
 alias clock='peaclock --config-dir ~/.config/peaclock'
 alias bonsai='cbonsai -l i -t 0.5'
-alias matrix='neo-matrix -D -a -s 20 -c cyan'
+alias matrix='neo-matrix -D -a -s 20 -c blue'
 alias htp='htop'
 
 # System & network

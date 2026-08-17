@@ -16,32 +16,32 @@ style = { shape = "beam", blinking = "Off" }
 
 [colors.primary]
 background = "#050505"
-foreground = "#00ffff"
+foreground = "#c9d1d9"
 
 [colors.cursor]
-text = "#050505"
-cursor = "#00ffff"
+text = "#0d1117"
+cursor = "#58a6ff"
 
 [colors.selection]
-text = "#050505"
-background = "#00ffff"
+text = "#0d1117"
+background = "#58a6ff"
 
 [colors.normal]
-black   = "#050505"
-red     = "#ff005f"
-green   = "#00afaf"
-yellow  = "#5fafff"
-blue    = "#0087ff"
-magenta = "#af00ff"
-cyan    = "#00ffff"
-white   = "#ffffff"
+black   = "#0d1117"
+red     = "#f85149"
+green   = "#3fb950"
+yellow  = "#d29922"
+blue    = "#58a6ff"
+magenta = "#bc8cff"
+cyan    = "#76e3ea"
+white   = "#c9d1d9"
 
 [colors.bright]
-black   = "#585858"
-red     = "#ff5f87"
-green   = "#5fffaf"
-yellow  = "#87d7ff"
-blue    = "#5fafff"
-magenta = "#df87ff"
-cyan    = "#5fffff"
-white   = "#ffffff"
+black   = "#484f58"
+red     = "#ffa198"
+green   = "#56d364"
+yellow  = "#e3b341"
+blue    = "#79c0ff"
+magenta = "#d2a8ff"
+cyan    = "#b3f0ff"
+white   = "#f0f6fc"
