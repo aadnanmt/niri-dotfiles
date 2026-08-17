@@ -15,6 +15,7 @@ show_owner = false
 show_group = false
 
 [preview]
-image_quality = 75
-max_width = 800
-max_height = 800
+image_quality = 85
+max_width = 1920
+max_height = 1080
+image_delay = 10

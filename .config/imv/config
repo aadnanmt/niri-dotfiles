@@ -1,3 +1,6 @@
 [options]
-suppress_default_binds = true
-scaling = nearest
+scaling_mode = full
+upscaling_method = linear
+background = 050505
+width = 1280
+height = 720
