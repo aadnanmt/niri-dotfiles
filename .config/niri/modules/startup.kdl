@@ -10,8 +10,11 @@ spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "dunst"
 spawn-at-startup "waybar"
 
-// Idle management: kill stale swayidle first, then spawn
-spawn-at-startup "bash" "-c" "pkill swayidle 2>/dev/null; swayidle -w timeout 600 '/usr/bin/swaylock -c 050505' timeout 900 'niri msg action power-off-monitors'"
+// Idle management: lock after 10min
+spawn-at-startup "swayidle" "-w" "timeout" "600" "swaylock"
+
+// Clipboard history
+spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
