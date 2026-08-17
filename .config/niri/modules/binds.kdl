@@ -16,7 +16,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+B hotkey-overlay-title="Open a Browser: firefox" { spawn "firefox"; }
-    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "$HOME/.config/fuzzel/launcher.sh"; }
     Super+Shift+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "/usr/bin/swaylock" "-c" "050505"; }
     Mod+N hotkey-overlay-title="Open Neovim: kitty" { spawn "kitty" "-e" "nvim"; }
 
@@ -206,10 +206,13 @@ binds {
 
 
     // Notification Center
-    Mod+Shift+N allow-when-locked=false hotkey-overlay-title="Notif Center: wofi" { spawn-sh "$HOME/.config/wofi/notif-center.sh"; }
+    Mod+Shift+N allow-when-locked=false hotkey-overlay-title="Notif Center: fuzzel" { spawn-sh "$HOME/.config/fuzzel/notif-center.sh"; }
+
+    // Clipboard History
+    Mod+Ctrl+V allow-when-locked=false hotkey-overlay-title="Clipboard: fuzzel" { spawn-sh "~/.config/niri/clipboard.sh"; }
 
     // Powermenu
-    Mod+P allow-when-locked=false hotkey-overlay-title="Powermenu: wofi" { spawn-sh "$HOME/.config/wofi/powermenu.sh"; }
+    Mod+P allow-when-locked=false hotkey-overlay-title="Powermenu: fuzzel" { spawn-sh "$HOME/.config/fuzzel/powermenu.sh"; }
     
     // Wallpaper Random
     Mod+Shift+W allow-when-locked=false hotkey-overlay-title="Random Wallpaper: awww" { spawn-sh "$HOME/.config/niri/random-wp.sh"; }
@@ -288,7 +291,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // Emoji Picker
-    Super+Shift+E allow-when-locked=false hotkey-overlay-title="Emoji Picker: wofi" { spawn "wofi-emoji"; }
+    Super+E allow-when-locked=false hotkey-overlay-title="Emoji Picker: fuzzel" { spawn-sh "$HOME/.config/fuzzel/fuzzel-emoji.sh"; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+Period { quit; }

@@ -27,7 +27,7 @@
   "custom/arch": {
     "format": "󰣇 ",
     "tooltip": false,
-    "on-click": "~/.config/wofi/launcher.sh"
+    "on-click": "~/.config/fuzzel/launcher.sh"
   },
 
   "clock": {
@@ -81,7 +81,7 @@
 
   "custom/power": {
     "tooltip": false,
-    "on-click": "~/.config/wofi/powermenu.sh &",
+    "on-click": "~/.config/fuzzel/powermenu.sh &",
     "format": "⏻"
   },
 

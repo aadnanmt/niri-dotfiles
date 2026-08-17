@@ -2,7 +2,6 @@ alacritty
 awww
 bat
 brightnessctl
-btop
 cava
 dunst
 fastfetch
@@ -15,6 +14,10 @@ fzf
 git
 git-lfs
 glow
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
 htop
 imagemagick
 imv
@@ -27,10 +30,12 @@ neovim
 niri
 noto-fonts
 noto-fonts-emoji
+pacman-contrib
 pavucontrol
 pipewire-alsa
 pipewire-pulse
 polkit-kde-agent
+python-mutagen
 qt5-wayland
 qt6-wayland
 ripgrep
@@ -43,9 +48,9 @@ ttf-jetbrains-mono-nerd
 unzip
 waybar
 wl-clipboard
-wofi
 wtype
 xdg-desktop-portal-gnome
 yazi
+yt-dlp
 zoxide
 zsh
