@@ -31,7 +31,7 @@
 | Window Manager | Niri |
 | Shell | Fish + Starship |
 | Terminal | Kitty |
-| Launcher | wofi |
+| Launcher | Fuzzel |
 | Status Bar | Waybar |
 | Editor | Neovim (LazyVim) |
 | Notifications | Dunst |
@@ -60,9 +60,29 @@
 ├── shell/            # Shared POSIX aliases/functions/env (SoT)
 ├── swaylock/         # Lock screen
 ├── waybar/           # Status bar
-├── wofi/             # App launcher
+├── fuzzel/             # App launcher, powermenu, emoji picker
 └── yazi/             # File manager
 ```
+
+## Install
+
+`install.sh` installs packages with paru. It reads two lists:
+
+- `pkglist-official.txt`
+- `pkglist-aur.txt`
+
+Then it runs every script in `setup/`. Note: `restore.sh` is interactive.
+
+### Post-install: Yazi plugins
+
+```bash
+# GVFS plugin for MTP/SMB/SFTP (optional)
+git clone https://github.com/SGau89/gvfs.yazi ~/.config/yazi/plugins/gvfs.yazi
+```
+
+## Cheatsheet
+
+`shell/gen-cheatsheet.sh` makes `CHEATSHEET.md`. It lists all aliases and abbreviations for each shell (POSIX `aliases.sh`, fish `aliases.fish`, fish `abbr.fish`). Run it from `~/.config/shell/` (fish abbr: `cheatgen`). The file is auto-generated and gitignored. Do not edit it by hand.
 
 ## Keybinds
 
@@ -71,12 +91,12 @@
 | Mod + Return | Open terminal (kitty) |
 | Mod + Shift + B | Open browser (firefox) |
 | Mod + B | Select wallpaper |
-| Mod + D | App launcher (wofi) |
+| Mod + D | App launcher (fuzzel) |
 | Mod + N | Open Neovim (kitty) |
-| Mod + P | Powermenu (wofi) |
-| Mod + Shift + N | Notification center (wofi) |
+| Mod + P | Powermenu (fuzzel) |
+| Mod + Shift + N | Notification center (fuzzel) |
 | Mod + Shift + W | Random wallpaper |
-| Mod + Shift + E | Emoji picker (wofi-emoji) |
+| Super + E | Emoji picker (fuzzel) |
 | Mod + Shift + L | Lock screen (swaylock) |
 | Mod + Shift + Slash | Show hotkey overlay |
 | Mod + Q | Close window |
@@ -124,7 +144,7 @@
 
 Based on [aadnanmt/hyprland-dotfiles](https://github.com/aadnanmt/hyprland-dotfiles) — refactored from Hyprland to Niri WM.
 
-- **[elifouts (Dotfiles)](https://github.com/elifouts/Dotfiles):** Wofi configs, Powermenu.
+- **[elifouts (Dotfiles)](https://github.com/elifouts/Dotfiles):** Original menu configs.
 - **[dln (wofi-emoji)](https://github.com/dln/wofi-emoji):** Emoji selector.
 - **[victordantasdev/waybar](https://github.com/victordantasdev/waybar):** Waybar base config.
 - **[LazyVim](https://www.lazyvim.org/):** Neovim framework.

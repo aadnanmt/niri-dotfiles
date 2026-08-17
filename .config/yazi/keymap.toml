@@ -1,9 +1,37 @@
-[manager]
+[mgr]
 prepend_keymap = [
-  { on = "y",  run = ["ya"],                    desc = "Yank file" },
-  { on = "x",  run = ["yank", "cut"],           desc = "Cut file" },
-  { on = "p",  run = ["paste"],                 desc = "Paste file" },
-  { on = "d",  run = ["remove"],                desc = "Delete" },
-  { on = "r",  run = ["rename"],                desc = "Rename" },
-  { on = "Space", run = "toggle",               desc = "Toggle select" },
+  # Custom overrides
+  { on = "s", run = "linemode size", desc = "Linemode: size" },
+  { on = "z", run = "plugin zoxide", desc = "Jump to a directory via zoxide" },
+
+  # GVFS (MTP, SMB, SFTP, etc) — overrides default tab_switch 1/2/3
+  { on = "1", run = "plugin gvfs -- select-then-mount --jump", desc = "Mount + jump" },
+  { on = "2", run = "plugin gvfs -- select-then-unmount", desc = "Unmount" },
+  { on = "3", run = "plugin gvfs -- jump-to-device", desc = "Jump to device" },
+  { on = "<Backspace>", run = "plugin gvfs -- jump-back-prev-cwd", desc = "Jump back" },
+
+  # Disable unused defaults
+  { on = "K", run = "noop", desc = "Disabled: seek preview" },
+  { on = "J", run = "noop", desc = "Disabled: seek preview" },
+  { on = "<Tab>", run = "noop", desc = "Disabled: spot" },
+  { on = ";", run = "noop", desc = "Disabled: shell interactive" },
+  { on = ":", run = "noop", desc = "Disabled: shell block" },
+  { on = "4", run = "noop", desc = "Disabled: tab switch" },
+  { on = "5", run = "noop", desc = "Disabled: tab switch" },
+  { on = "6", run = "noop", desc = "Disabled: tab switch" },
+  { on = "7", run = "noop", desc = "Disabled: tab switch" },
+  { on = "8", run = "noop", desc = "Disabled: tab switch" },
+  { on = "9", run = "noop", desc = "Disabled: tab switch" },
+  { on = "[", run = "noop", desc = "Disabled: tab prev" },
+  { on = "]", run = "noop", desc = "Disabled: tab next" },
+  { on = "{", run = "noop", desc = "Disabled: tab swap prev" },
+  { on = "}", run = "noop", desc = "Disabled: tab swap next" },
+  { on = [
+    "t",
+    "t",
+  ], run = "noop", desc = "Disabled: tab create" },
+  { on = [
+    "t",
+    "r",
+  ], run = "noop", desc = "Disabled: tab rename" },
 ]
