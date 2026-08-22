@@ -9,11 +9,12 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 
 # Navigation & files
-alias ls='lsd'
-alias ll='lsd -l'
-alias la='lsd -a'
-alias lla='lsd -la'
-# alias tree='tree -I "node_modules|.git|target|.next|dist|build|.venv|__pycache__|*.egg-info"'  # optional,uncomment when tree installed
+alias ls='lsd --ignore-glob="node_modules" --ignore-glob=".git" --ignore-glob="target" --ignore-glob=".next" --ignore-glob="dist" --ignore-glob="build" --ignore-glob=".venv" --ignore-glob="__pycache__" --ignore-glob="egg-info"'
+alias ll='lsd -l --ignore-glob="node_modules" --ignore-glob=".git" --ignore-glob="target" --ignore-glob=".next" --ignore-glob="dist" --ignore-glob="build" --ignore-glob=".venv" --ignore-glob="__pycache__" --ignore-glob="egg-info"'
+alias la='lsd -a --ignore-glob="node_modules" --ignore-glob=".git" --ignore-glob="target" --ignore-glob=".next" --ignore-glob="dist" --ignore-glob="build" --ignore-glob=".venv" --ignore-glob="__pycache__" --ignore-glob="egg-info"'
+alias lla='lsd -la --ignore-glob="node_modules" --ignore-glob=".git" --ignore-glob="target" --ignore-glob=".next" --ignore-glob="dist" --ignore-glob="build" --ignore-glob=".venv" --ignore-glob="__pycache__" --ignore-glob="egg-info"'
+alias lsa='lsd -la'
+alias tree='lsd --tree --ignore-glob="node_modules" --ignore-glob="dist" --ignore-glob=".git" --ignore-glob="target" --ignore-glob=".next" --ignore-glob="build" --ignore-glob=".venv" --ignore-glob="__pycache__" --ignore-glob="egg-info"'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'

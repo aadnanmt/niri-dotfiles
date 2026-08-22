@@ -25,16 +25,17 @@
     format = "<span foreground='#58a6ff'><b>%s</b></span>\n%b"
     
     # Spacing
-    padding = 16
-    horizontal_padding = 16
-    text_icon_padding = 12
-    gap_size = 8
+    padding = 20
+    horizontal_padding = 20
+    text_icon_padding = 16
+    gap_size = 12
     
     # Borders and radius
-    frame_width = 2
+    frame_width = 3
     frame_color = "#58a6ff"
     separator_color = "frame"
     corner_radius = 0
+    transparency = 10
 
     # Icons
     icon_position = off

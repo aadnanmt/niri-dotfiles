@@ -106,11 +106,11 @@
 
 #cpu,
 #memory {
-  color: @fg_muted;
+  color: @accent;
 }
 
 #custom-podman {
-  color: @fg_muted;
+  color: @purple;
 }
 
 #custom-music {
