@@ -8,6 +8,7 @@ show_mtime = true
 linemode = "size"
 sort_by = "alphabetical"
 sort_sensitive = false
+mouse_events = ["click", "scroll", "touch", "move", "drag"]
 
 [status]
 show_perm = false
