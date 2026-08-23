@@ -1,6 +1,6 @@
-# Cyan Rice Niri Dotfiles
+# Niri Dotfiles
 
-> Personal dotfiles for **Niri** (Wayland compositor) on Arch Linux. Cyan theme, minimal, clean.
+> Personal dotfiles for **Niri** (Wayland compositor) on Arch Linux. GitHub Dark Default theme, minimal, TUI-first.
 
 ## Screenshots
 
@@ -27,7 +27,7 @@
 ## Stack
 
 | Domain | App |
-|--------|-----|
+| -------- | ----- |
 | Window Manager | Niri |
 | Shell | Fish + Starship |
 | Terminal | Kitty |
@@ -37,17 +37,24 @@
 | Notifications | Dunst |
 | File Manager | Yazi |
 | Lock Screen | Swaylock |
+| System Monitor | btop / htop |
+| Audio Visualizer | Cava |
+| Music Player | kew |
+| Image Viewer | imv |
+| Markdown Reader | glow |
 
 ## Directory Structure
 
 ```
 .config/
-├── alacritty/        # Terminal emulator
+├── alacritty/        # Terminal emulator (alt)
+├── bat/              # Syntax highlighting
 ├── btop/             # System monitor
 ├── cava/             # Audio visualizer
 ├── dunst/            # Notifications
 ├── fastfetch/        # System fetch
 ├── fish/             # Shell config (conf.d/, functions/)
+├── fuzzel/           # App launcher, powermenu, emoji picker
 ├── glow/             # Markdown reader
 ├── gtk-3.0/          # GTK3 theme / settings.ini
 ├── gtk-4.0/          # GTK4 theme
@@ -55,12 +62,14 @@
 ├── imv/              # Image viewer
 ├── kew/              # Music player
 ├── kitty/            # Terminal
+├── lazygit/          # Git TUI
 ├── lsd/              # LS colors
-├── niri/             # WM config (modules/)
+├── niri/             # WM config (modules/, scripts/)
+├── nvim/             # Editor (LazyVim + custom plugins)
 ├── shell/            # Shared POSIX aliases/functions/env (SoT)
+├── starship.toml     # Shell prompt
 ├── swaylock/         # Lock screen
 ├── waybar/           # Status bar
-├── fuzzel/             # App launcher, powermenu, emoji picker
 └── yazi/             # File manager
 ```
 
@@ -86,16 +95,16 @@ git clone https://github.com/SGau89/gvfs.yazi ~/.config/yazi/plugins/gvfs.yazi
 
 ## Keybinds
 
+### Essential
+
 | Key | Action |
-|-----|--------|
+| ----- | -------- |
 | Mod + Return | Open terminal (kitty) |
 | Mod + Shift + B | Open browser (firefox) |
 | Mod + B | Select wallpaper |
 | Mod + D | App launcher (fuzzel) |
 | Mod + N | Open Neovim (kitty) |
 | Mod + P | Powermenu (fuzzel) |
-| Mod + Shift + N | Notification center (fuzzel) |
-| Mod + Shift + W | Random wallpaper |
 | Super + E | Emoji picker (fuzzel) |
 | Mod + Shift + L | Lock screen (swaylock) |
 | Mod + Shift + Slash | Show hotkey overlay |
@@ -137,8 +146,25 @@ git clone https://github.com/SGau89/gvfs.yazi ~/.config/yazi/plugins/gvfs.yazi
 | Print / Ctrl + Print / Alt + Print | Screenshot (all / screen / window) |
 | Mod + Shift + Period or Ctrl+Alt+Del | Quit niri |
 | Mod + Shift + P | Power off monitors |
-| XF86Audio\* | Volume up/down, mute |
-| XF86MonBrightness\* | Brightness up/down |
+| XF86Audio* | Volume up/down, mute |
+| XF86MonBrightness* | Brightness up/down |
+
+### Personal (hidden from overlay)
+
+| Key | Action |
+| ----- | -------- |
+| Mod + Shift + N | Net stats (notify-send) |
+| Mod + Shift + E | Updates check (notify-send) |
+| Mod + Shift + G | Podman status (notify-send) |
+| Mod + Shift + O | Start pomodoro |
+| Mod + Shift + M | Cancel pomodoro |
+| Mod + Ctrl + V | Clipboard history (fuzzel) |
+
+## Colorscheme
+
+**GitHub Dark Default** `#58a6ff` accent, `#050505` background
+
+Applied to: kitty, alacritty, dunst, fuzzel, waybar, swaylock, niri focus ring, nvim, fish, FZF, kew, yazi, cava, starship, peaclock
 
 ## Credits
 
@@ -149,6 +175,7 @@ Based on [aadnanmt/hyprland-dotfiles](https://github.com/aadnanmt/hyprland-dotfi
 - **[victordantasdev/waybar](https://github.com/victordantasdev/waybar):** Waybar base config.
 - **[LazyVim](https://www.lazyvim.org/):** Neovim framework.
 - **[Niri](https://github.com/YaLTeR/niri):** Wayland compositor.
+- **[GitHub Dark Default](https://github.com/primer/github-vscode-theme):** Color palette (MIT).
 - **Arch Linux:** Foundation.
 
 ## License
