@@ -1,0 +1,19 @@
+# Map extensions to languages
+--map-syntax "*.kdl:TOML"
+--map-syntax "*.astro:TypeScript"
+--map-syntax "*.fish:Fish"
+--map-syntax "*.conf:INI"
+--map-syntax "*.mdx:Markdown"
+--map-syntax "*.css:CSS"
+--map-syntax "*.scss:CSS"
+--map-syntax "*.nix:Shell"
+--map-syntax ".bashrc:Bash"
+--map-syntax ".zshrc:Zsh"
+--map-syntax ".vimrc:Vim"
+--map-syntax ".config/nvim/**/*.lua:Lua"
+
+# Display
+--style="numbers,changes"
+--italic-text=always
+--decorations=always
+--wrap=never

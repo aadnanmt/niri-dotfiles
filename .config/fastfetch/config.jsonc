@@ -3,7 +3,7 @@
   "logo": {
     "source": "arch_small",
     "color": {
-      "1": "cyan",
+      "1": "blue",
     },
     "padding": {
       "top": 1,
@@ -13,8 +13,8 @@
   "display": {
     "separator": " ➜  ",
     "color": {
-      "keys": "cyan",
-      "title": "cyan",
+      "keys": "blue",
+      "title": "blue",
     },
   },
   "modules": [
@@ -22,53 +22,53 @@
     {
       "type": "title",
       "key": " ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     {
       "type": "os",
       "key": "󰣇 ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     {
       "type": "kernel",
       "key": " ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     {
       "type": "cpu",
       "key": " ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
       "format": "{1}"
     },
     {
       "type": "shell",
       "key": " ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     {
       "type": "wm",
       "key": " ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     {
       "type": "terminal",
       "key": " ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     {
       "type": "uptime",
       "key": "󱎫 ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     {
       "type": "memory",
       "key": " ",
-      "keyColor": "cyan",
+      "keyColor": "blue",
     },
     "break",
     {
       "type": "colors",
-      "symbol": "circle",
+      "symbol": "square",
     },
   ],
 }

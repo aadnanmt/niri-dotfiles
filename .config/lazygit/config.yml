@@ -1,0 +1,39 @@
+gui:
+  showIcons: true
+  nerdFontsVersion: "3"
+  border: sharp
+  theme:
+    activeBorderColor:
+      - blue
+      - bold
+    inactiveBorderColor:
+      - "#484f58"
+    searchingActiveBorderColor:
+      - blue
+      - bold
+    selectedLineBgColor:
+      - "#161b22"
+    cherryPickedCommitFgColor:
+      - blue
+    cherryPickedCommitBgColor:
+      - "#1f6feb"
+    markedBaseCommitFgColor:
+      - blue
+    currentCommitBgColor:
+      - "#161b22"
+    currentCommitBorderColor:
+      - blue
+    diffStatColor:
+      - "#484f58"
+    diffFgColor:
+      - "#c9d1d9"
+    diffAddColor:
+      - "#3fb950"
+    diffDelColor:
+      - "#f85149"
+    diffAddHighlightColor:
+      - "#56d364"
+    diffDelHighlightColor:
+      - "#ffa198"
+    blameCommitColor:
+      - "#484f58"

@@ -204,10 +204,12 @@ binds {
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
 
-
-    // Notification Center
-    Mod+Shift+N allow-when-locked=false hotkey-overlay-title="Notif Center: fuzzel" { spawn-sh "$HOME/.config/fuzzel/notif-center.sh"; }
-
+     // Notification Center
+    Mod+Shift+N allow-when-locked=false hotkey-overlay-title="Net Stats" { spawn-sh "$HOME/.config/niri/net-stats.sh"; }
+    Mod+Shift+E allow-when-locked=false hotkey-overlay-title="Updates Check" { spawn-sh "$HOME/.config/niri/updates-check.sh"; }
+    Mod+Shift+G allow-when-locked=false hotkey-overlay-title="Podman Status" { spawn-sh "$HOME/.config/niri/podman-status.sh"; }
+    Mod+Shift+O allow-when-locked=false hotkey-overlay-title="Pomodoro" { spawn-sh "$HOME/.config/niri/pomo.sh"; }
+    Mod+Shift+M allow-when-locked=false hotkey-overlay-title="Pomodoro Cancel" { spawn-sh "$HOME/.config/niri/pomo-cancel.sh"; }
     // Clipboard History
     Mod+Ctrl+V allow-when-locked=false hotkey-overlay-title="Clipboard: fuzzel" { spawn-sh "~/.config/niri/clipboard.sh"; }
 

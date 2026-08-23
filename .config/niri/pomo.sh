@@ -1,5 +1,9 @@
 #!/bin/bash
 
+PIDFILE="/tmp/pomo.pid"
+echo $$ > "$PIDFILE"
+trap 'rm -f "$PIDFILE"; exit' INT TERM
+
 while true; do
     notify-send -u normal " 󰄉 Pomodoro" "I proud youu! Let' go to focus 25 minutes (^o^)"
     sleep 25m
