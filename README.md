@@ -176,6 +176,7 @@ Based on [aadnanmt/hyprland-dotfiles](https://github.com/aadnanmt/hyprland-dotfi
 - **[LazyVim](https://www.lazyvim.org/):** Neovim framework.
 - **[Niri](https://github.com/YaLTeR/niri):** Wayland compositor.
 - **[GitHub Dark Default](https://github.com/primer/github-vscode-theme):** Color palette (MIT).
+- **[shivam-salkar/minimal-waybar-config](https://github.com/shivam-salkar/minimal-waybar-config):** Waybar base config.
 - **Arch Linux:** Foundation.
 
 ## License
