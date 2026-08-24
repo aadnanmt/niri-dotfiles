@@ -1,8 +1,9 @@
-alacritty
 awww
 bat
 brightnessctl
 cava
+cliphist
+duf
 dunst
 fastfetch
 fd
