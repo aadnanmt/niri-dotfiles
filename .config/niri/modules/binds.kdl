@@ -215,6 +215,9 @@ binds {
 
     // Powermenu
     Mod+P allow-when-locked=false { spawn-sh "$HOME/.config/fuzzel/powermenu.sh"; }
+
+    // Kew Music
+    Mod+Alt+K allow-when-locked=false hotkey-overlay-title=null { spawn-sh "kitty -e kew"; }
     
     // Wallpaper Random
     Mod+Shift+W allow-when-locked=false { spawn-sh "$HOME/.config/niri/scripts/random-wp.sh"; }

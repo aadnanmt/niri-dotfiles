@@ -1,6 +1,7 @@
 #!/bin/bash
+# Requires: pacman-contrib (checkupdates), paru (AUR), libnotify (notify-send)
 aur=$(paru -Qua 2>/dev/null | wc -l | tr -d ' ')
-official=$(pacman -Qu 2>/dev/null | wc -l | tr -d ' ')
+official=$(checkupdates 2>/dev/null | wc -l | tr -d ' ')
 total=$((aur + official))
 
 if [ "$total" -gt 0 ]; then
