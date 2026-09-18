@@ -139,7 +139,7 @@ if [ -d "$REPO_DIR/Wallpapers" ]; then
 fi
 
 # --- Phase 7: Setup scripts ---
-echo -e "\n${YELLOW}--- Phase 6: Configuration ---${NC}"
+echo -e "\n${YELLOW}--- Phase 7: Configuration ---${NC}"
 if [ -d "$REPO_DIR/setup" ]; then
   chmod +x "$REPO_DIR/setup/"*.sh
   for script in "$REPO_DIR/setup"/*.sh; do
@@ -147,6 +147,13 @@ if [ -d "$REPO_DIR/setup" ]; then
     echo -e "\n${MAGENTA}Running: $name${NC}"
     run bash "$script"
   done
+fi
+
+# --- Phase 8: Fix permissions ---
+echo -e "\n${YELLOW}--- Phase 8: Permissions ---${NC}"
+if ! $DRY_RUN; then
+  find "$HOME/.config/" -name "*.sh" -exec chmod +x {} \; 2>/dev/null
+  echo -e "${GREEN}OK${NC}"
 fi
 
 echo -e "${MAGENTA}"
