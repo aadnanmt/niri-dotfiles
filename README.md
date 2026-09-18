@@ -84,6 +84,7 @@
 │   └── yt-dlp/
 ├── install.sh
 ├── setup/
+├── Wallpapers/
 ├── pkglist-base.txt
 └── pkglist-rice.txt
 ```

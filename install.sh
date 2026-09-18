@@ -122,7 +122,23 @@ if [ "$PROFILE" = "all" ] && [ -d "$REPO_DIR/dev" ]; then
   done
 fi
 
-# --- Phase 6: Setup scripts ---
+# --- Phase 6: Deploy Wallpapers ---
+echo -e "\n${YELLOW}--- Phase 6: Wallpapers ---${NC}"
+if [ -d "$REPO_DIR/Wallpapers" ]; then
+  echo -n "Wallpapers → ~/Pictures/Wallpapers ... "
+  if $DRY_RUN; then
+    echo -e "${YELLOW}[DRY]${NC}"
+  else
+    mkdir -p "$HOME/Pictures/Wallpapers"
+    if cp -r "$REPO_DIR/Wallpapers/"* "$HOME/Pictures/Wallpapers/" 2>/dev/null; then
+      echo -e "${GREEN}OK${NC}"
+    else
+      echo -e "${RED}FAIL${NC}"
+    fi
+  fi
+fi
+
+# --- Phase 7: Setup scripts ---
 echo -e "\n${YELLOW}--- Phase 6: Configuration ---${NC}"
 if [ -d "$REPO_DIR/setup" ]; then
   chmod +x "$REPO_DIR/setup/"*.sh
