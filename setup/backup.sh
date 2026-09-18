@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SOURCE_DIR="$HOME/.config"
-BACKUP_DIR="$HOME/Dots/dotfiles_backup_$(date +%Y%m%d_%H%M%S)"
+BACKUP_DIR="$HOME/DOTFILES/dotfiles_backup_$(date +%Y%m%d_%H%M%S)"
 CONFIG=("niri" "kitty" "fish" "waybar" "fuzzel" "dunst" "fastfetch" "lsd" "yazi" "cava" "swaylock" "gtk-3.0" "gtk-4.0" "cliphist" "peaclock" "bat" "btop" "htop" "kew" "lazygit" "mpv" "nvim" "pipewire" "shell" "systemd" "glow" "imv")
 CONFIG_FILES=("starship.toml")
 
