@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
