@@ -7,6 +7,7 @@
 BACKUP_PARENT="$HOME/DOTFILES"
 TARGET_DIR="$HOME/.config"
 
+# shellcheck source=scripts/colors.sh
 source "$(dirname "$0")/colors.sh"
 
 echo -e "${MAGENTA}==========================================${NC}"
@@ -37,7 +38,7 @@ fi
 
 echo -e "Selected backup: ${MAGENTA}$(basename "$SELECTED_BACKUP")${NC}"
 echo -e "${YELLOW}Warning: this will overwrite your current configuration files.${NC}"
-read -p "Do you want to proceed with the restore? (y/n): " confirm
+read -rp "Do you want to proceed with the restore? (y/n): " confirm
 
 if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
   echo -e "${YELLOW}Restore aborted.${NC}"
@@ -54,7 +55,7 @@ for config_path in "$SELECTED_BACKUP"/*; do
     mkdir -p "$TARGET_DIR"
 
     # Remove exist config folder before restoring
-    rm -rf "$TARGET_DIR/$config_name"
+    rm -rf "${TARGET_DIR:?}/$config_name"
 
     if cp -r "$config_path" "$TARGET_DIR/" 2>/dev/null; then
       echo -e "${GREEN}DONE${NC}"

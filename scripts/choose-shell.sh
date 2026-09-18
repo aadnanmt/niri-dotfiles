@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# shellcheck source=scripts/colors.sh
 source "$(dirname "$0")/colors.sh"
 
 echo -e "${MAGENTA}==========================================${NC}"
@@ -14,7 +15,7 @@ for i in "${!SHELLS[@]}"; do
 done
 
 echo -e "${MAGENTA}==========================================${NC}"
-read -p "Enter shell name or number: " choice
+read -rp "Enter shell name or number: " choice
 
 SELECT_SHELL=""
 if [[ "$choice" =~ ^[0-3]+$ ]] && [ "$choice" -gt 0 ] && [ "$choice" -le "${#SHELLS[@]}" ]; then
@@ -46,7 +47,7 @@ else
 fi
 
 echo -e "${MAGENTA}==========================================${NC}"
-read -p "Do you want to switch to $SELECT_SHELL now? (y/n): " exec_now
+read -rp "Do you want to switch to $SELECT_SHELL now? (y/n): " exec_now
 if [[ "$exec_now" =~ ^[Yy]$ ]]; then
   exec "$SHELL_PATH"
 fi

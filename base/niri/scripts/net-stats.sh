@@ -1,9 +1,9 @@
 #!/bin/bash
 iface=$(ip route get 1.1.1.1 2>/dev/null | awk '{print $5; exit}')
-[ -z "$iface" ] && iface=$(ls /sys/class/net | grep -v lo | head -1)
+[ -z "$iface" ] && iface=$(compgen -G '/sys/class/net/*' -G '*/statistics/rx_bytes' | head -1 | sed 's|/sys/class/net/||;s|/statistics.*||')
 
-rx=$(cat /sys/class/net/$iface/statistics/rx_bytes)
-tx=$(cat /sys/class/net/$iface/statistics/tx_bytes)
+rx=$(cat "/sys/class/net/$iface/statistics/rx_bytes")
+tx=$(cat "/sys/class/net/$iface/statistics/tx_bytes")
 
 fmt() {
   local b=$1
@@ -18,4 +18,4 @@ fmt() {
   fi
 }
 
-notify-send "󰒊 Net Stats ($iface)" "↓ $(fmt $rx)  ↑ $(fmt $tx)"
+notify-send "󰒊 Net Stats ($iface)" "↓ $(fmt "$rx")  ↑ $(fmt "$tx")"

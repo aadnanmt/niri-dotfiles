@@ -16,10 +16,11 @@ fi
 echo "Monitoring Waybar config and style files for changes..."
 
 inotifywait -m "$CONFIG_FILE" "$STYLE_FILE" -e modify,close_write,moved_to |
-while read -r path _; do
-  echo "Change detected in $path. Reloading Waybar..."
-  pkill -x waybar
-  sleep 0.2
-  waybar -c "$CONFIG_FILE" -s "$STYLE_FILE" & disown
-  echo "Waybar reloaded."
-done
+  while read -r path _; do
+    echo "Change detected in $path. Reloading Waybar..."
+    pkill -x waybar
+    sleep 0.2
+    waybar -c "$CONFIG_FILE" -s "$STYLE_FILE" &
+    disown
+    echo "Waybar reloaded."
+  done
