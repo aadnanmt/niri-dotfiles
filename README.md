@@ -12,23 +12,35 @@
 ## Screenshots
 
 <details>
-<summary>Interface & Menus</summary>
+<summary>Desktop</summary>
 <br>
-<img src="preview/interface.png" width="800">
-<img src="preview/menu-apps-wofi.png" width="800">
-<img src="preview/waybar.png" width="800">
-<img src="preview/powermenu.png" width="800">
-<img src="preview/emoji-picker.png" width="800">
-<img src="preview/wp-select.png" width="800">
+<img src="preview/desktop-interface.png" width="800">
 </details>
 
 <details>
-<summary>TUI & Apps</summary>
+<summary>Launcher</summary>
+<br>
+<img src="preview/fuzzel-menu-apps.png" width="800">
+<img src="preview/fuzzel-wallpaper-select.png" width="800">
+<img src="preview/fuzzel-emoji-picker.png" width="800">
+</details>
+
+<details>
+<summary>Apps</summary>
+<br>
+<img src="preview/neovim.png" width="800">
+<img src="preview/yazi.png" width="800">
+<img src="preview/lazygit.png" width="800">
+<img src="preview/kew.png" width="800">
+<img src="preview/bat.png" width="800">
+<img src="preview/htop-monitoring.png" width="800">
+</details>
+
+<details>
+<summary>TUI</summary>
 <br>
 <img src="preview/tui.png" width="800">
-<img src="preview/dunst.png" width="800">
-<img src="preview/htop.png" width="800">
-<img src="preview/yazi.png" width="800">
+<img src="preview/dunst-minimal.png" width="800">
 </details>
 
 ## Stack
