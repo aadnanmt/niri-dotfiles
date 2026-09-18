@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "$REPO_DIR/setup/colors.sh"
+source "$REPO_DIR/scripts/colors.sh"
 
 # --- Parse flags ---
 PROFILE="base"
@@ -141,7 +141,7 @@ fi
 # --- Phase 7: Setup scripts ---
 echo -e "\n${YELLOW}--- Phase 7: Configuration ---${NC}"
 if [ -d "$REPO_DIR/setup" ]; then
-  chmod +x "$REPO_DIR/setup/"*.sh
+  chmod +x "$REPO_DIR/scripts/"*.sh
   for script in "$REPO_DIR/setup"/*.sh; do
     name="$(basename "$script")"
     echo -e "\n${MAGENTA}Running: $name${NC}"
