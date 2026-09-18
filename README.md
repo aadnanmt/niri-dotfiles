@@ -1,6 +1,13 @@
 # Niri Dotfiles
 
-> Personal dotfiles for **Niri** (Wayland compositor) on Arch Linux. GitHub Dark Default theme, minimal, TUI-first.
+> Personal dotfiles for **Niri** (Wayland compositor) on Arch Linux. GitHub Dark Default theme, TUI-first.
+
+## Profiles
+
+| Flag     | What gets deployed                |
+| -------- | --------------------------------- |
+| `--base` | base/ only (WM + shell + editor)  |
+| `--all`  | base/ + dev/ + rice/ (everything) |
 
 ## Screenshots
 
@@ -26,59 +33,75 @@
 
 ## Stack
 
-| Domain | App |
-| -------- | ----- |
-| Window Manager | Niri |
-| Shell | Fish + Starship |
-| Terminal | Kitty |
-| Launcher | Fuzzel |
-| Status Bar | Waybar |
-| Editor | Neovim (LazyVim) |
-| Notifications | Dunst |
-| File Manager | Yazi |
-| Lock Screen | Swaylock |
-| System Monitor | btop / htop |
-| Audio Visualizer | Cava |
-| Music Player | kew |
-| Image Viewer | imv |
-| Markdown Reader | glow |
+| Domain           | App              |
+| ---------------- | ---------------- |
+| Window Manager   | Niri             |
+| Shell            | Fish + Starship  |
+| Terminal         | Kitty            |
+| Launcher         | Fuzzel           |
+| Status Bar       | Waybar           |
+| Editor           | Neovim (LazyVim) |
+| Notifications    | Dunst            |
+| File Manager     | Yazi             |
+| Lock Screen      | Swaylock         |
+| System Monitor   | btop / htop      |
+| Audio Visualizer | Cava             |
+| Music Player     | kew              |
+| Image Viewer     | imv              |
+| Markdown Reader  | glow             |
 
 ## Directory Structure
 
 ```
-.config/
-├── alacritty/        # Terminal emulator (alt)
-├── bat/              # Syntax highlighting
-├── btop/             # System monitor
-├── cava/             # Audio visualizer
-├── dunst/            # Notifications
-├── fastfetch/        # System fetch
-├── fish/             # Shell config (conf.d/, functions/)
-├── fuzzel/           # App launcher, powermenu, emoji picker
-├── glow/             # Markdown reader
-├── gtk-3.0/          # GTK3 theme / settings.ini
-├── gtk-4.0/          # GTK4 theme
-├── htop/             # System monitor
-├── imv/              # Image viewer
-├── kew/              # Music player
-├── kitty/            # Terminal
-├── lazygit/          # Git TUI
-├── lsd/              # LS colors
-├── niri/             # WM config (modules/, scripts/)
-├── nvim/             # Editor (LazyVim + custom plugins)
-├── shell/            # Shared POSIX aliases/functions/env (SoT)
-├── starship.toml     # Shell prompt
-├── swaylock/         # Lock screen
-├── waybar/           # Status bar
-└── yazi/             # File manager
+.
+├── base/
+│   ├── bat/
+│   ├── dunst/
+│   ├── fish/
+│   ├── fuzzel/
+│   ├── kitty/
+│   ├── lsd/
+│   ├── niri/
+│   ├── nvim/
+│   ├── shell/
+│   ├── starship.toml
+│   ├── swaylock/
+│   ├── waybar/
+│   └── yazi/
+├── dev/
+│   └── lazygit/
+├── rice/
+│   ├── cava/
+│   ├── fastfetch/
+│   ├── glow/
+│   ├── gtk-3.0/
+│   ├── gtk-4.0/
+│   ├── htop/
+│   ├── imv/
+│   ├── kew/
+│   ├── mpv/
+│   ├── peaclock/
+│   └── yt-dlp/
+├── install.sh
+├── setup/
+├── pkglist-base.txt
+└── pkglist-rice.txt
 ```
 
 ## Install
 
-`install.sh` installs packages with paru. It reads two lists:
+`install.sh` installs packages with paru, then deploys configs to `~/.config/`.
 
-- `pkglist-official.txt`
-- `pkglist-aur.txt`
+```bash
+./install.sh --base            # base/ only (default)
+./install.sh --all             # base/ + dev/ + rice/
+./install.sh --all --dry-run   # preview everything
+```
+
+It reads package lists by profile:
+
+- `pkglist-base.txt` - always installed
+- `pkglist-rice.txt` - install with `--all`
 
 Then it runs every script in `setup/`. Note: `restore.sh` is interactive.
 
@@ -97,78 +120,78 @@ git clone https://github.com/SGau89/gvfs.yazi ~/.config/yazi/plugins/gvfs.yazi
 
 ### Essential
 
-| Key | Action |
-| ----- | -------- |
-| Mod + Return | Open terminal (kitty) |
-| Mod + Shift + B | Open browser (firefox) |
-| Mod + B | Select wallpaper |
-| Mod + D | App launcher (fuzzel) |
-| Mod + N | Open Neovim (kitty) |
-| Mod + P | Powermenu (fuzzel) |
-| Super + E | Emoji picker (fuzzel) |
-| Mod + Shift + L | Lock screen (swaylock) |
-| Mod + Shift + Slash | Show hotkey overlay |
-| Mod + Q | Close window |
-| Mod + O | Toggle overview |
-| Mod + F | Maximize column |
-| Mod + Shift + F | Fullscreen window |
-| Mod + M | Maximize window to edges |
-| Mod + Ctrl + F | Expand column to available width |
-| Mod + C | Center column |
-| Mod + Ctrl + C | Center visible columns |
-| Mod + V | Toggle floating window |
-| Mod + Shift + V | Focus floating ↔ tiling |
-| Mod + W | Toggle tabbed column |
-| Mod + R / Mod + Shift + R | Cycle column width presets |
-| Mod + Ctrl + R | Reset window height |
-| Mod + Ctrl + Shift + R | Cycle window height presets |
-| Mod + Left/Right or H/L | Focus column |
-| Mod + Up/Down or J/K | Focus window |
-| Mod + Ctrl + arrows | Move window in column |
-| Mod + Home / End | Focus first/last column |
-| Mod + Ctrl + Home / End | Move column to first/last |
-| Mod + Shift + arrows | Focus monitor |
-| Mod + Shift + Ctrl + arrows | Move column to monitor |
-| Mod + PageUp/Down or U/I | Focus workspace |
-| Mod + Ctrl + PageUp/Down | Move column to workspace |
-| Mod + Shift + PageUp/Down | Move workspace |
-| Mod + WheelScroll | Focus workspace |
-| Mod + Ctrl + WheelScroll | Move column to workspace |
-| Mod + Shift + WheelScroll | Focus/move column |
-| Mod + 1-9 | Switch workspace |
-| Mod + Shift + 1-9 | Move column to workspace |
-| Mod + Comma | Consume window into column |
-| Mod + Period | Expel window from column |
-| Mod + BracketLeft/Right | Consume/expel column |
-| Mod + Minus / Equal | Column width -/+ 10% |
-| Mod + Shift + Minus / Equal | Window height -/+ 10% |
-| Mod + Escape | Toggle shortcuts inhibitor |
-| Print / Ctrl + Print / Alt + Print | Screenshot (all / screen / window) |
-| Mod + Shift + Period or Ctrl+Alt+Del | Quit niri |
-| Mod + Shift + P | Power off monitors |
-| XF86Audio* | Volume up/down, mute |
-| XF86MonBrightness* | Brightness up/down |
+| Key                                  | Action                             |
+| ------------------------------------ | ---------------------------------- |
+| Mod + Return                         | Open terminal (kitty)              |
+| Mod + Shift + B                      | Open browser (firefox)             |
+| Mod + B                              | Select wallpaper                   |
+| Mod + D                              | App launcher (fuzzel)              |
+| Mod + N                              | Open Neovim (kitty)                |
+| Mod + P                              | Powermenu (fuzzel)                 |
+| Super + E                            | Emoji picker (fuzzel)              |
+| Mod + Shift + L                      | Lock screen (swaylock)             |
+| Mod + Shift + Slash                  | Show hotkey overlay                |
+| Mod + Q                              | Close window                       |
+| Mod + O                              | Toggle overview                    |
+| Mod + F                              | Maximize column                    |
+| Mod + Shift + F                      | Fullscreen window                  |
+| Mod + M                              | Maximize window to edges           |
+| Mod + Ctrl + F                       | Expand column to available width   |
+| Mod + C                              | Center column                      |
+| Mod + Ctrl + C                       | Center visible columns             |
+| Mod + V                              | Toggle floating window             |
+| Mod + Shift + V                      | Focus floating ↔ tiling            |
+| Mod + W                              | Toggle tabbed column               |
+| Mod + R / Mod + Shift + R            | Cycle column width presets         |
+| Mod + Ctrl + R                       | Reset window height                |
+| Mod + Ctrl + Shift + R               | Cycle window height presets        |
+| Mod + Left/Right or H/L              | Focus column                       |
+| Mod + Up/Down or J/K                 | Focus window                       |
+| Mod + Ctrl + arrows                  | Move window in column              |
+| Mod + Home / End                     | Focus first/last column            |
+| Mod + Ctrl + Home / End              | Move column to first/last          |
+| Mod + Shift + arrows                 | Focus monitor                      |
+| Mod + Shift + Ctrl + arrows          | Move column to monitor             |
+| Mod + PageUp/Down or U/I             | Focus workspace                    |
+| Mod + Ctrl + PageUp/Down             | Move column to workspace           |
+| Mod + Shift + PageUp/Down            | Move workspace                     |
+| Mod + WheelScroll                    | Focus workspace                    |
+| Mod + Ctrl + WheelScroll             | Move column to workspace           |
+| Mod + Shift + WheelScroll            | Focus/move column                  |
+| Mod + 1-9                            | Switch workspace                   |
+| Mod + Shift + 1-9                    | Move column to workspace           |
+| Mod + Comma                          | Consume window into column         |
+| Mod + Period                         | Expel window from column           |
+| Mod + BracketLeft/Right              | Consume/expel column               |
+| Mod + Minus / Equal                  | Column width -/+ 10%               |
+| Mod + Shift + Minus / Equal          | Window height -/+ 10%              |
+| Mod + Escape                         | Toggle shortcuts inhibitor         |
+| Print / Ctrl + Print / Alt + Print   | Screenshot (all / screen / window) |
+| Mod + Shift + Period or Ctrl+Alt+Del | Quit niri                          |
+| Mod + Shift + P                      | Power off monitors                 |
+| XF86Audio*                           | Volume up/down, mute               |
+| XF86MonBrightness*                   | Brightness up/down                 |
 
 ### Personal (hidden from overlay)
 
-| Key | Action |
-| ----- | -------- |
-| Mod + Shift + N | Net stats (notify-send) |
+| Key             | Action                      |
+| --------------- | --------------------------- |
+| Mod + Shift + N | Net stats (notify-send)     |
 | Mod + Shift + E | Updates check (notify-send) |
 | Mod + Shift + G | Podman status (notify-send) |
-| Mod + Shift + O | Start pomodoro |
-| Mod + Shift + M | Cancel pomodoro |
-| Mod + Ctrl + V | Clipboard history (fuzzel) |
+| Mod + Shift + O | Start pomodoro              |
+| Mod + Shift + M | Cancel pomodoro             |
+| Mod + Ctrl + V  | Clipboard history (fuzzel)  |
 
 ## Colorscheme
 
 **GitHub Dark Default** `#58a6ff` accent, `#050505` background
 
-Applied to: kitty, alacritty, dunst, fuzzel, waybar, swaylock, niri focus ring, nvim, fish, FZF, kew, yazi, cava, starship, peaclock
+Applied to: kitty, dunst, fuzzel, waybar, swaylock, niri focus ring, nvim, fish, FZF, kew, yazi, cava, starship, peaclock
 
 ## Credits
 
-Based on [aadnanmt/hyprland-dotfiles](https://github.com/aadnanmt/hyprland-dotfiles) — refactored from Hyprland to Niri WM.
+Based on [aadnanmt/hyprland-dotfiles](https://github.com/aadnanmt/hyprland-dotfiles) - refactored from Hyprland to Niri WM.
 
 - **[elifouts (Dotfiles)](https://github.com/elifouts/Dotfiles):** Original menu configs.
 - **[dln (wofi-emoji)](https://github.com/dln/wofi-emoji):** Emoji selector.
