@@ -16,6 +16,10 @@ export QT_QPA_PLATFORM="wayland"
 export CARGO_HOME="$HOME/.cargo"
 export PARU_PAGER="bat"
 export PAGER="bat -p"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# GitHub Dark Default palette (shared: fish/bash/zsh)
+export FZF_DEFAULT_OPTS="--color=bg+:#161b22,bg:#050505,spinner:#58a6ff,hl:#f85149,fg:#c9d1d9,header:#3fb950,info:#58a6ff,pointer:#58a6ff,marker:#58a6ff,fg+:#f0f6fc,prompt:#58a6ff,hl+:#f85149"
 
 export PATH="$CARGO_HOME/bin:$HOME/.local/bin:$PATH"
 # Same too this optional toolchain paths, uncomment with the exports above
@@ -23,3 +27,6 @@ export PATH="$CARGO_HOME/bin:$HOME/.local/bin:$PATH"
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export GPG_TTY
+# last line must exit 0: non-tty (fish -c/scripts) would kill init.fish's `source && env`
+GPG_TTY=$(tty) || GPG_TTY=""
