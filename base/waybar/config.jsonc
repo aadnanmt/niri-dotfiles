@@ -112,14 +112,6 @@
     "tooltip": false
   },
 
-  "custom/updates": {
-    "format": " {}",
-    "interval": 3600,
-    "exec": "paru -Qua 2>/dev/null | wc -l | tr -d ' '",
-    "exec-if": "paru -Qua 2>/dev/null | grep -q .",
-    "tooltip": true,
-    "on-click": "kitty -e paru -Syu"
-  },
 
   "battery": {
     "format": "{icon} {capacity}%",
