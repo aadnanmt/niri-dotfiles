@@ -84,11 +84,6 @@ alias st='systemctl status'
 alias sl='journalctl -u'
 
 # JS Dev Stack (optional, uncomment when installed)
-# alias b='bun'
-# alias bi='bun install'
-# alias br='bun run'
-# alias bx='bun x'
-# alias ba='bun add'
 # alias pn='pnpm'
 # alias pni='pnpm install'
 # alias pnr='pnpm run'
@@ -111,7 +106,7 @@ alias v='nvim'
 alias .v='nvim .'
 
 # TUI apps
-alias lg='lazygit'
+# alias lg='lazygit'  # uncomment when lazygit installed
 # alias lkd='lazydocker'  # optional, uncomment when lazydocker installed
 alias cv='cava'
 alias matrix='neo-matrix -D -a -s 20 -c blue'
@@ -130,7 +125,7 @@ alias header='curl -I'
 
 # Config shortcuts
 alias cw='nvim ~/.config/waybar/config.jsonc'
-alias cl='nvim ~/.config/lazygit/config.yml'
+# alias cl='nvim ~/.config/lazygit/config.yml'  # uncomment when lazygit installed
 
 # Python
 alias py='python3'

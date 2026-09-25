@@ -65,13 +65,6 @@ abbr -a sd 'sudo systemctl disable --now'
 abbr -a jlu 'journalctl -u'
 
 # --- JS Dev Stack (optional, uncomment when installed) ---
-# # Bun
-# abbr -a b 'bun'
-# abbr -a bi 'bun install'
-# abbr -a br 'bun run'
-# abbr -a bx 'bun x'
-# abbr -a ba 'bun add'
-#
 # # Pnpm
 # abbr -a pn 'pnpm'
 # abbr -a pni 'pnpm install'

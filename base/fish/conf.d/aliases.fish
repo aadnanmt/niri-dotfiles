@@ -34,7 +34,7 @@ alias r='reset'
 alias reload='source ~/.config/fish/config.fish && echo "Shell reloaded, Cuyy!"'
 
 # TUI apps rice
-alias lg='lazygit'
+# alias lg='lazygit'  # uncomment when lazygit installed
 # alias lkd='lazydocker'  # optional, uncomment when lazydocker installed
 alias cv='cava'
 alias pipes='pipes.sh -b -p 1 -r 120 -c 4 -c 5 -t 1 -f 30'
@@ -57,7 +57,7 @@ alias header='curl -I'
 alias cf='nvim ~/.config/fish/config.fish'
 alias cw='nvim ~/.config/waybar/config.jsonc'
 alias cnvim='cd ~/.config/nvim/ && nvim .'
-alias cl='nvim ~/.config/lazygit/config.yml'
+# alias cl='nvim ~/.config/lazygit/config.yml'  # uncomment when lazygit installed
 
 # Python
 alias py='python3'
