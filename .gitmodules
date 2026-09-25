@@ -1,0 +1,3 @@
+[submodule "base/nvim"]
+	path = base/nvim
+	url = https://github.com/aadnanmt/nvim-config.git
