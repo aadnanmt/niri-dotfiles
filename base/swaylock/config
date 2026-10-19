@@ -10,6 +10,7 @@ indicator-thickness=7
 
 # Background
 color=050505
+fade-in=0.3
 
 # Inside Ring
 inside-color=00000000
