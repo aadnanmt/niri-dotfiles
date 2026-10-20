@@ -1,5 +1,5 @@
 /* =============================================================================
-   WAYBAR — github-dark-default
+   WAYBAR // github-dark-default
    ============================================================================= */
 @define-color bg_main     #050505;
 @define-color bg_module   #050505;
@@ -23,7 +23,8 @@
 }
 
 #waybar {
-  background: @bg_main;
+  background: #050505;
+  margin: 8px 12px;
   color: @text_main;
 }
 

@@ -1,6 +1,15 @@
 {
-  "layer": "top",
+  "layer": "bottom",
   "position": "top",
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-bottom": 0,
+  "reload_style_on_change": true,
+  "fixed-center": true,
+  "height": 36,
+  "passthrough": false,
+  "margin-right": 0,
+  "exclusive-zone": -1,
   "modules-left": ["group/launcher"],
 
   "modules-center": ["clock", "custom/player", "custom/weather"],
@@ -13,29 +22,26 @@
     "network",
     "cpu",
     "memory",
-    "custom/updates",
-    "custom/podman",
     "custom/lock",
-    "custom/power"
+    "custom/power",
   ],
 
   "group/launcher": {
     "orientation": "horizontal",
-    "modules": ["custom/arch"]
+    "modules": ["custom/arch"],
   },
 
   "custom/arch": {
     "format": "󰣇 ",
-    "tooltip": false,
-    "on-click": "~/.config/fuzzel/launcher.sh"
+    "on-click": "~/.config/fuzzel/launcher.sh",
   },
 
   "clock": {
     "timezone": "Asia/Jakarta",
-    "tooltip": false,
+    "tooltip": true,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "󰃰 {:%Y-%m-%d %H:%M:%S}",
-    "interval": 1
+    "interval": 1,
   },
 
   "network": {
@@ -44,61 +50,66 @@
     "format-disconnected": "󰤮",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "interval": 3,
-    // "min-length": 20,
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "WiFi: {essid}\nIP: {ipaddr}\nDown: {bandwidthDownBits}\nUp: {bandwidthUpBits}",
+    "tooltip-format-disconnected": "Disconnected",
   },
 
   "cpu": {
     "interval": 1,
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "CPU Usage",
     "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
   },
 
   "memory": {
     "interval": 15,
-    "tooltip": false,
-    "format": "  {used:0.1f}G/{total:0.1f}G"
+    "tooltip": true,
+    "tooltip-format": "Memory Usage",
+    "format": "  {used:0.1f}G/{total:0.1f}G",
   },
 
   "custom/uptime": {
     "format": "󰅐 {}",
     "interval": 60,
-    "tooltip": false,
-    "exec": "awk '{d=int($1/86400); h=int(($1%86400)/3600); m=int(($1%3600)/60)} d>0{printf \"%dd %dh\", d, h; next} h>0{printf \"%dh %dm\", h, m; next} {printf \"%dm\", m}' /proc/uptime"
+    "tooltip": true,
+    "tooltip-format": "System Uptime",
+    "exec": "awk '{d=int($1/86400); h=int(($1%86400)/3600); m=int(($1%3600)/60)} d>0{printf \"%dd %dh\", d, h; next} h>0{printf \"%dh %dm\", h, m; next} {printf \"%dm\", m}' /proc/uptime",
   },
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%\nClick to open mixer",
     "format-muted": "",
     "format-icons": {
       "default": ["", "", "", "", " "],
-      "headphone": ["", "", "", "", ""]
+      "headphone": ["", "", "", "", ""],
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+  },
+
+  "custom/lock": {
+    "format": "󰌾",
+    "tooltip": true,
+    "tooltip-format": "Lock Screen",
+    "on-click": "swaylock -c 050505",
   },
 
   "custom/power": {
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Power Menu",
     "on-click": "~/.config/fuzzel/powermenu.sh &",
-    "format": "⏻"
+    "format": "⏻",
   },
-
-  "custom/podman": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": 10,
-    "exec": "/home/nan/.config/waybar/scripts/docker-stats/docker-stats",
-    "tooltip": true
-  },
-
   "custom/weather": {
     "format": "{}",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Weather",
     "interval": 1800,
     "exec": "~/.config/waybar/scripts/weather.sh",
-    "return-type": "json"
+    "return-type": "json",
   },
   "custom/player": {
     "format": "{icon} {text}",
@@ -109,26 +120,25 @@
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous",
     "max-length": 10,
-    "tooltip": false
+    "tooltip": true,
   },
-
 
   "battery": {
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-icons": {
       "charging": ["󰢜", "󰂅", "󰂋", "󰂊", "󰂈", "󰂉", "󰂊", "󰂋"],
-      "discharging": ["󰂎", "󰁺", "󰁼", "󰁾", "󰁿", "󰂂", "󰂀", "󰂁"]
+      "discharging": ["󰂎", "󰁺", "󰁼", "󰁾", "󰁿", "󰂂", "󰂀", "󰂁"],
     },
     "interval": 30,
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "Battery: {capacity}%\nTime: {timeTo}",
   },
 
   "backlight": {
     "format": "󰃟 {percent}%",
     "interval": 1,
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "Backlight: {percent}%",
   },
-
-  "include": ["~/.config/waybar/scripts/modules.json"]
 }
