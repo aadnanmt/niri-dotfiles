@@ -1,0 +1,45 @@
+// Rounded corners window
+window-rule {
+    geometry-corner-radius 13
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^kitty$"#
+    draw-border-with-background false
+    opacity 0.9
+    background-effect {
+        blur true
+        saturation 1.1
+    }
+}
+
+layer-rule {
+    match namespace="^waybar$"
+    opacity 0.9
+    background-effect {
+        blur true
+        xray true
+        saturation 1.1
+    }
+}
+
+layer-rule {
+    match namespace="^dunst$"
+    opacity 0.9
+    background-effect {
+        blur true
+        xray true
+        saturation 1.1
+    }
+}
+
+layer-rule {
+    match namespace="^fuzzel$"
+    opacity 0.9
+    background-effect {
+        blur true
+        xray true
+        saturation 1.1
+    }
+}

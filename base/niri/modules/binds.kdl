@@ -223,6 +223,8 @@ binds {
     Mod+Shift+W allow-when-locked=false { spawn-sh "$HOME/.config/niri/scripts/random-wp.sh"; }
     // Wallpaper Select
     Mod+B allow-when-locked=false hotkey-overlay-title="Select Wallpaper: awww" { spawn-sh "$HOME/.config/niri/scripts/wp-select.sh"; }
+    // Toggle Blur/Solid mode
+    Mod+T allow-when-locked=false hotkey-overlay-title="Toggle Blur/Solid" { spawn-sh "$HOME/.config/niri/scripts/toggle-effects.sh"; }
     // Cycle through widths set in preset-column-widths.
     Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
